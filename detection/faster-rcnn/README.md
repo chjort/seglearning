@@ -7,3 +7,5 @@ Dataset consists of images labeled with class and bounding box.
     y_i = (class), (x0, y0, width, height)
     
 The image is passed into a CNN and features are extracted. Then fully connected layers to predict class (classification), and seperate fully connected layers to predict bounding box parameters (regression).
+
+This method is only able to detect and single object in an image.
