@@ -12,3 +12,7 @@ Loss function for bounding box prediction is given by Intersection-Over-Union (I
     J = Intersection(box_hat, box) / Union(box_hat, box)
 
 This method is only able to detect and single object in an image.
+
+
+## Multiple bounding boxes and classes (RCNN - Region CNN)
+Consists of two parts, a **feature extractor** (typically pre-trained like ResNet, VGG, Inception,...) and a **region proposal network**.
