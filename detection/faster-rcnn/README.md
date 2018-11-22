@@ -1,6 +1,6 @@
 # Object detection methods
 
-## Single object bounding box via. regression.
+## Single object bounding box via. regression. (Classification with localization)
 Dataset consists of images labeled with class and bounding box.
 
     x_i = img
@@ -13,6 +13,9 @@ Loss function for bounding box prediction is given by Intersection-Over-Union (I
 
 This method is only able to detect and single object in an image.
 
+## Multiple object detection with sliding window CNN.
+A set of window sizes is chosen (n1xn1, n2xn2, n3xn3). The window sizes are smaller than the actual image. Each of the windows are slided over the image and for each slide a CNN classifies the content of the window. This happens for all window sizes. The first windows that classifies as an object are chosen as bounding boxes.
+
 
 ## Multiple bounding boxes and classes (RCNN - Region CNN)
-Consists of two parts, a **feature extractor** (typically pre-trained like ResNet, VGG, Inception,...) and a **region proposal network**.
+Consists of two parts, a **feature extractor** (typically pre-trained model like ResNet, VGG, Inception, etc.) and a **region proposal network**.
