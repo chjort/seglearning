@@ -20,10 +20,12 @@ This method is computationally expensive, and bounding boxes are not that accura
 
 
 ## More effective multiple object detecion with Selective Search.
-Consists of a **region proposal network (RPN)**, and a CNN + FC to classify label and regress boxes for each region.
+Consists of a region proposal algorithm, and a CNN + FC to classify label and regress boxes for each region.
 
-The RPN replaces the sliding window mechanism by instead learning which regions to classify. These regions are called Regions of Interest (RoIs). 
+The region proposal algorithm (SS) works by bottom-up hierarchichal clustering of pixels based on color, texture, size, and shape. Regions are merged from bottom up until a specific amount of RoIs are found. Each regions is then classified and bounding box predicted.
 
 
-## R-CNN
-Consists of two parts, a **feature extractor** (typically pre-trained model like ResNet, VGG, Inception, etc.) and a **region proposal network (RPN)**.
+## R-CNN **TODO**
+Consists of two parts, a **region proposal network (RPN)** and a CNN + FC to classify label and regress boxes.
+
+The RPN replaces the region proposla algorithm by instead _learning_ which regions to classify. These regions are called Regions of Interest (RoIs). 
