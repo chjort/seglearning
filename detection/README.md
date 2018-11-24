@@ -1,5 +1,9 @@
 # Object detection methods
 
+Datasets for object detection consists of images (X) and labels (Y). The labels are bounding boxes + class.
+
+Classification+Detection examples: http://host.robots.ox.ac.uk/pascal/VOC/voc2012/examples/index.html
+
 ## Single object bounding box via. regression. (Classification with localization)
 Dataset consists of images labeled with class and bounding box.
 
@@ -28,4 +32,4 @@ The region proposal algorithm (SS) works by bottom-up hierarchichal clustering o
 ## R-CNN **###TODO###**
 Consists of two parts, a **region proposal network (RPN)** and a CNN + FC to classify label and regress boxes.
 
-The RPN replaces the region proposla algorithm by instead _learning_ which regions to classify. These regions are called Regions of Interest (RoIs). 
+The RPN replaces the region proposla algorithm by instead _learning_ which regions to classify. These regions are called Regions of Interest (RoIs). Each region is passed into the CNN + FC to classify and regress boxes.
