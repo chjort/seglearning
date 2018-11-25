@@ -12,7 +12,7 @@ Dataset consists of images labeled with class and bounding box.
 
     x_i = img
     y_i = (class), (x0, y0, width, height)
-    
+
 The image is passed into a CNN and features are extracted. Then fully connected layers to predict class (classification), and seperate fully connected layers to predict bounding box parameters (regression).
 Loss function for bounding box prediction is given by Intersection-Over-Union (IoU).
 
@@ -36,3 +36,5 @@ The region proposal algorithm (SS) works by bottom-up hierarchichal clustering o
 Consists of two parts, a **region proposal network (RPN)** and a CNN + FC to classify label and regress boxes.
 
 The RPN replaces the region proposla algorithm by instead _learning_ which regions to classify. These regions are called Regions of Interest (RoIs). Each region is passed into the CNN + FC to classify and regress boxes.
+
+Test
