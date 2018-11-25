@@ -55,3 +55,4 @@ Consists of two parts, a **region proposal network (RPN)** and a CNN + FC to cla
 ![RCNN](figures/rcnn.png)
 
 The RPN replaces the region proposla algorithm by instead _learning_ which regions to classify. These regions are called Regions of Interest (RoIs). Each region is passed into the CNN + FC to classify and regress boxes.
+(TODO: https://medium.com/@tanaykarmarkar/region-proposal-network-rpn-backbone-of-faster-r-cnn-4a744a38d7f9)
