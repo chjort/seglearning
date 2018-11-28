@@ -1,0 +1,16 @@
+# PASCAL Annotation Version 1.00
+
+Image filename : "TUDarmstadt/PNGImages/sideviews-cars/car-pic165-sml2.png"
+Image size (X x Y x C) : 259 x 194 x 3
+Database : "The TU Darmstadt Database"
+Objects with ground truth : 1 { "PAScarSide" }
+
+# Note that there might be other objects in the image
+# for which ground truth data has not been provided.
+
+# Top left pixel co-ordinates : (1, 1)
+
+# Details for object 1 ("PAScarSide")
+Original label for object 1 "PAScarSide" : "carSide"
+Bounding box for object 1 "PAScarSide" (Xmin, Ymin) - (Xmax, Ymax) : (50, 79) - (220, 151)
+Pixel mask for object 1 "PAScarSide" : "TUDarmstadt/GTMasks/sideviews-cars/car-pic165-sml2.png"

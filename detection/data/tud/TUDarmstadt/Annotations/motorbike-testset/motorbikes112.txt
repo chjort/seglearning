@@ -1,0 +1,15 @@
+# PASCAL Annotation Version 1.00
+
+Image filename : "TUDarmstadt/PNGImages/motorbike-testset/motorbikes112.png"
+Image size (X x Y x C) : 300 x 225 x 3
+Database : "The TU Darmstadt Database"
+Objects with ground truth : 1 { "PASmotorbikeSide" }
+
+# Note that there might be other objects in the image
+# for which ground truth data has not been provided.
+
+# Top left pixel co-ordinates : (1, 1)
+
+# Details for object 1 ("PASmotorbikeSide")
+Original label for object 1 "PASmotorbikeSide" : "motorbikeSide"
+Bounding box for object 1 "PASmotorbikeSide" (Xmin, Ymin) - (Xmax, Ymax) : (46, 73) - (234, 182)

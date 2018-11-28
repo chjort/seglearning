@@ -1,0 +1,16 @@
+# PASCAL Annotation Version 1.00
+
+Image filename : "TUDarmstadt/PNGImages/sideviews-cows2/cow-pic550-sml-lt.png"
+Image size (X x Y x C) : 234 x 163 x 3
+Database : "The TU Darmstadt Database"
+Objects with ground truth : 1 { "PAScowSide" }
+
+# Note that there might be other objects in the image
+# for which ground truth data has not been provided.
+
+# Top left pixel co-ordinates : (1, 1)
+
+# Details for object 1 ("PAScowSide")
+Original label for object 1 "PAScowSide" : "cowSide"
+Bounding box for object 1 "PAScowSide" (Xmin, Ymin) - (Xmax, Ymax) : (33, 7) - (218, 113)
+Pixel mask for object 1 "PAScowSide" : "TUDarmstadt/GTMasks/sideviews-cows2/cow-pic550-sml-lt.png"
