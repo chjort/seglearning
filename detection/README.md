@@ -8,10 +8,11 @@ Classification+Detection examples:
 * http://www.image-net.org/download-bboxes
 
 ___
->**All feature extractors (CNN) in RCNN detection networks, consists of pre-trained ImageNet models, such as VGG, ResNet, or Inception.**
+>**All feature extractors (CNN) in detection networks, consists of pre-trained ImageNet models, such as VGG, ResNet, or Inception.**
 ___
+## Region based detectors
 
-## Single object bounding box via. regression. (RCNN)
+### Single object bounding box via. regression. (Classification + Localization)
 Dataset consists of images labeled with class and bounding box.
 
     x_i = img
@@ -22,9 +23,10 @@ Dataset consists of images labeled with class and bounding box.
 ![Architecture for classifcation and localization](figures/classification_localization2.png)
 
 The image is passed into a CNN and features are extracted. Then fully connected layers to predict class (classification), and separate fully connected layers to predict bounding box parameters (regression).
-This is called the _detection network_ and is referred to as a RCNN (Region Convolutional Neural Network).
 
-Loss function for bounding box prediction is given by mean Average Precision (mAP) based on the Intersection-Over-Union (IoU).
+Loss function for classification is cross-entropy and loss function for bounding boxes is regression loss such as mean squared error.
+
+Performance metric for bounding box prediction is given by mean Average Precision (mAP) based on the Intersection-Over-Union (IoU).
 (Todo: https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173)
 
 ![IoU](figures/IoU.png)
@@ -33,9 +35,7 @@ Loss function for bounding box prediction is given by mean Average Precision (mA
 
 This method is only able to detect and single object in an image.
 
-## Multiple object detection with Region Proposal Methods  and RCNN.
-
-### Sliding Windows Region Proposal + RCNN
+### Sliding Windows Region Proposal (Multi-object detection)
 Multiple objects such as on the figure below requires more advanced methods.
 ![Inputs images with ground-truth bounding boxes.](figures/input_label.png)
 
@@ -48,7 +48,7 @@ A set of window sizes is chosen (n1xn1, n2xn2, n3xn3). The window sizes are smal
 This method is computationally expensive, and bounding boxes are not that accurate.
 
 
-### More effective multiple object detecion with Selective Search + RCNN.
+### More effective multiple object detecion with Selective Search RCNN.
 Consists of a region proposal algorithm, and a CNN + FC to classify label and regress boxes for each region.
 
 ![SS](figures/selective_search.png)
@@ -65,7 +65,7 @@ SS proposes 2000 RoIs, and the RoIs are then warped into a fixes size quadratic 
 
 RoIs are fed into the CNN + FC to predict class and bounding boxes. The box regressor refines the bounding boxes in the RoIs.
 
-## Faster-RCNN
+### Faster-RCNN
 Faster-RCNN replaces selective search with a **Region Proposal Network (RPN)**.
 
 ![Faster-RCNN](figures/faster-rcnn.png)
@@ -79,3 +79,15 @@ Instead of warping the RoIs into a fixed size image, the RoIs are passed into a 
 [RoI Pooling Figure]
 
 Each region is passed into the CNN + FC to classify and regress boxes.
+
+## Single shot detectors
+
+### YOLO
+
+
+### SSD
+
+# Region versus Single shot
+Faster-RCNN is slower, but more accurate.
+
+YOLO and SSD are much faster but less accurate.
