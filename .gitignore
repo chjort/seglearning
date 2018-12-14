@@ -1,3 +1,15 @@
+# Data folders
+data
+
+# Checkpoint folders
+chkpoints
+
+# Model folders
+models
+
+# Log folders
+logs
+
 # macOS
 .DS_Store
 
